@@ -1,9 +1,9 @@
 # NBM-Homework-04-Code-Quiz
 MY USER STORY 
 
-AS AN aspiring software engineer and coding bootcamp student
+AS AN aspiring software engineer and coding boot camp student
 
-I WANT to develop a quiz with a set timer using effective JavaScript fundamentals that provides users with quiz scores that will be listed on a high score sheet
+I WANT to develop a quiz with a set timer using effective JavaScript fundamentals that provides users with quiz scores based on their performance that will be listed on a high score sheet
 
 SO THAT I can showcase my understanding of JavaScript fundamentals while also challenging my peers to fun brain teasers
 

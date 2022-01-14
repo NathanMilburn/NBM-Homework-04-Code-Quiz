@@ -1,52 +1,83 @@
 var questions = [
     {
-        title: "Commonly used data types DO NOT include:",
+        title: "Where was NFL Quarterback Dan Marino's last official win?",
         choices: [
-            "strings",
-            "booleans",
-            "alerts",
-            "numbers"
+            "Baltimore",
+            "Miami",
+            "Seattle",
+            "Vancouver"
         ],
-        answer: "alerts"
+        answer: "Seattle"
     },
     {
-        title: "The condition in an if / else statement is enclosed within ____.",
+        title: "Which of these eSports organizations was the first U.S team to win a major tournament in Counter Strike: Global Offensive?",
         choices: [
-            "quotes",
-            "curly brackets",
-            "parentheses",
-            "square brackets"
+            "Cloud9",
+            "Team Liquid",
+            "Evil Geniuses",
+            "OpTic Gaming"
         ],
-        answer: "parentheses"
+        answer: "Cloud9"
     },
     {
-        title: "Arrays in JavaScript can be used to store ____.",
+        title: "The Seattle Kraken played their inaugural season in the year ____.",
         choices: [
-            "numbers and strings",
-            "other arrays",
-            "booleans",
-            "all of the above"
+            "2015",
+            "1983",
+            "2021",
+            "2007"
         ],
-        answer: "all of the above"
+        answer: "2021"
     },
     {
-        title: "String values must be enclosed within ____ when being assigned to variables.",
+        title: "Which early 2000's sitcom featured actors Drake Bell and Josh Peck?",
         choices: [
-            "commas",
-            "curly brackets",
-            "quotes",
-            "parentheses"
+            "Zoey 101",
+            "The Suite Life of Zack and Cody",
+            "Yu-Gi-Oh!",
+            "Drake & Josh"
         ],
-        answer: "quotes"
+        answer: "Drake & Josh"
     },
     {
-        title: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        title: "Who lives in a pineapple under the sea?",
         choices: [
-            "JavaScript",
-            "terminal / bash",
-            "for loops",
-            "console.log"
+            "Carly Shay",
+            "Howie Long",
+            "Spongebob Squarepants",
+            "Lincoln Loud"
         ],
-        answer: "console.log"
+        answer: "Spongebob Squarepants"
+    },
+    {
+        title: "Things Rick Astley would never do.",
+        choices: [
+            "Give You up",
+            "Let You Down",
+            "Run Around",
+            "Hurt You",
+            "All of the above"
+        ],
+        answer: "All of the above"
+    },
+    {
+        title: "Star Wars Episode Three: ___ is widely regarded as the best installment of the prequel series of Sci-Fi movies.",
+        choices: [
+            "Return of the Jedi",
+            "The Last Storm Trooper",
+            "Revenge of the Sith",
+            "A New Hope"
+        ],
+        answer: "Revenge of the Sith"
+    },
+    {
+        title: "This MMORPG (Massive Multiplayer Online Roleplaying Game) was a global phenomena released in November of 2004.",
+        choices: [
+            "RuneScape",
+            "World of Warcraft",
+            "EverQuest",
+            "Star Wars: Knights of the Old Republic"
+        ],
+        answer: "World of Warcraft"
     }
 ];
