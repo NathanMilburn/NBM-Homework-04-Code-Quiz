@@ -14,6 +14,8 @@ body {
 
 header {
     text-align: center;
+    padding: 20px;
+    line-height: 1.5;
 }
 
 header h1 {
@@ -29,5 +31,43 @@ header h1 #header-h1-span {
 header h2 {
     font-size: 26px;
     color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+button {
+    height: 60px;
+    padding: 10px;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: cornflowerblue;
+    color:mintcream;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: black;
+    border: 2px solid cornflowerblue;
+}
+
+.high-score-button:hover {
+    background-color: gold;
+    border: 2px solid orange;
+}
+
+.start-button, .high-score-button {
+    color:mintcream;
+}
+
+.fancy {
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-timer, .timer-count {
+    text-align: right;
+    font-size: 32px;
+    margin-right: 15px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
