@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Guess <span id="header-h1-span">Again!</span></h1>
         <h2>The Apex of Multiple Choice Quiz Games. Are You Up for the Challenge?</h2>
 
@@ -18,29 +18,40 @@
         <p class="fancy"><strong>"That Was the Most Fun I've Ever Had!" -Grumpy Cat</strong></p>
         <p class="fancy"><strong>"I Really Don't See What All of the Fuss Is About... It's Pretty Okay If You Ask Me." -Someone With Bad Taste</strong></p>
 
-        <button class="start-button"><a href="/game.html">Test Your Knowledge!</a></button>
-        <button class="high-score-button"><a href="/highscores.html">High Scores!!! &#128081</a></button>
-    </header>
+        <!-- <button class="start-button"><a href="">Test Your Knowledge!</a></button>
+        <button class="high-score-button"><a href="">High Scores!!! &#128081</a></button> -->
+        <button id="start-button" class="btn">Test Your Knowledge!</button>
+        <button href="" id="highscore-btn" class="btn">View High Scores &#128081</button>
+    </div>
 
-    <main>
+    <div class="timer-and-score">
+        <p id="countdown">Timer:</p>
+        <p id="score">Score:</p>
+      </div>
+
+    <section class="questions">
+        <p>Questions:</p>
+    </section>
+
+    <section class="solutions">
+        <p>1:</p>
+        <p>2:</p>
+        <p>3:</p>
+        <p>4:</p>
+    </section>
+
+    <section class="buttons">
+        <button>Choice 1</button>
+        <button>Choice 2</button>
+        <button>Choice 3</button>
+        <button>Choice 4</button>
+    </section>
 
 
 
 
 
-        <div class="card-timer">
-            <div class="timer-text">
-            <div class="timer-count"><strong>60</strong></div>
-            <h4>Seconds Remaining</h4>
-        </div>
-
-
-
-
-    </main>
-
-
-    <script src="js/questions.js"></script>
-    <script src="js/quiz.js"></script>
+    <script src="/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/assets/js/questions.js"></script>
+    <script src="/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/assets/js/quiz.js"></script>
 </body>
 </html>
