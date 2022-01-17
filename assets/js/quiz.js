@@ -5,7 +5,7 @@
  * then, add some of your own questions!
  * Use this data to populate your quiz questions, choices, and answers.
  */
-console.log(questions);
+// console.log(questions);
 
 var timerEl = document.querySelector('#countdown');
 var timer;
@@ -49,7 +49,7 @@ function countDown() {
     timer = setInterval(function(){
         sec--;
         console.log(sec);
-        timerEl.textContent ='Time Left:'+sec + 'seconds';
+        timerEl.textContent ='Time Left:'+sec + ' Seconds';
 
         if (sec <= 0) {
             clearInterval(timer);
@@ -58,8 +58,11 @@ function countDown() {
 }
 
 
+
   const startBtn = document.querySelector('#start-button');
 
-  startBtn.addEventListener('click', () => {
-      countDown();
-  });
+//   startBtn.addEventListener('click', () => {
+//       countDown();
+//   });
+
+countDown();

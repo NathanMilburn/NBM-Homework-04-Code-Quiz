@@ -91,6 +91,11 @@ body {
     box-shadow: 0 0.6rem 1.4rem 0 rgba(104, 238, 26, 0.5);
 }
 
+.high-score {
+    font-family: 'Nova Square';
+    font-size: 36px;
+}
+
 #main {
     margin-bottom: 20px;
     font-size: 100px;
