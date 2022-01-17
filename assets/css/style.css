@@ -103,11 +103,41 @@ body {
     height: 25px;
   }
 
+/* Timer styling */
 #countdown, #score {
     font-size: 32px;
     font-family: 'Nova Square';
 }
 
+.game-header {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.game-header h1 {
+    font-size: 52px;
+    color: black;
+    font-family: 'Nova Square', cursive;
+}
+
+.game-header #header-h1-span {
+    color: cornflowerblue;
+}
+
+.game-header h2 {
+    font-size: 26px;
+    color: black;
+    font-family: 'Nova Square';
+}
 
 
 /* .start-button, .high-score-button {
