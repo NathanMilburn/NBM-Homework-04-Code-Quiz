@@ -14,30 +14,6 @@ var score = 0
 var sec = 0
 let availableQuestions = []
 
-
-// Game Timer
-function countDown() {
-    var sec = 10;
-    clearInterval(timer);
-    timer = setInterval(function(){
-        sec--;
-        console.log(sec);
-        timerEl.textContent ='Time Left:'+ sec + ' Seconds';
-
-        if (sec <= 0) {
-            clearInterval(timer);
-            timerEl.textContent ='Game Over';
-            endGame();
-        }
-    }, 1000);
-}
-
-
-
-  const startBtn = document.querySelector('#start-button');
-
-countDown();
-
 // Question and Answer Bank
 var questions = [
     {
@@ -107,6 +83,30 @@ var questions = [
     }
 ];
 
+
+// Game Timer
+function countDown() {
+    var sec = 10;
+    clearInterval(timer);
+    timer = setInterval(function(){
+        sec--;
+        console.log(sec);
+        timerEl.textContent ='Time Left:'+ sec + ' Seconds';
+
+        if (sec <= 0) {
+            clearInterval(timer);
+            timerEl.textContent ='Game Over';
+            endGame();
+        }
+    }, 1000);
+}
+
+
+
+  const startBtn = document.querySelector('#start-button');
+
+countDown();
+
 const SCORE_INCREMENTS = 100
 const TOTAL_QUESTIONS = 8
 
@@ -119,7 +119,7 @@ startGame = () => {
 
 endGame = () => {
     if(sec = 0) {
-        localStorage.setItem('mostRecentScore', score)
+        // localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/scoreinput.html')}
 }
@@ -167,7 +167,7 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
-        }, 1000)
+        }, 500)
     })
 })
 
