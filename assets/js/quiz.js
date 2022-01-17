@@ -1,19 +1,14 @@
-/*
- * questions.js is loaded in the HTML before quiz.js
- * It creates a global variable called questions that contains starter questions.
- * Take a look at the structure and familiarize yourself with each part
- * then, add some of your own questions!
- * Use this data to populate your quiz questions, choices, and answers.
- */
-// console.log(questions);
+
 
 var timerEl = document.querySelector('#countdown');
 var timer;
 
-var title = document.querySelector('#question');
+var title = document.querySelector('#title');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
 var scoreText = document.querySelector('#score');
+var progressText = document.querySelector('#progressText');
 
+var questionCounter = 0
 var currentQuestion = {}
 var acceptingAnswers = true
 var score = 0
@@ -46,79 +41,71 @@ function countDown() {
 
 countDown();
 
-// var title = document.querySelector('#question');
-// var choices = Array.from(document.querySelectorAll('.choice-text'));
-// var scoreText = document.querySelector('#score');
-
-// var currentQuestion = {}
-// var acceptingAnswers = true
-// var score = 0
-// let availableQuestions = []
 
 var questions = [
     {
         title: "Where was NFL Quarterback Dan Marino's last official win?",
-        choice01: "Baltimore",
-        choice02: "Miami",
-        choice03: "Seattle",
-        choice04: "Vancouver",
+        choice1: "Baltimore",
+        choice2: "Miami",
+        choice3: "Seattle",
+        choice4: "Vancouver",
         answer: 3,
         
     },
     {
         title: "Which of these eSports organizations was the first U.S team to win a major tournament in Counter Strike: Global Offensive?",
-        choice01: "Cloud9",
-        choice02: "Team Liquid",
-        choice03: "Evil Geniuses",
-        choice04: "OpTic Gaming",
+        choice1: "Cloud9",
+        choice2: "Team Liquid",
+        choice3: "Evil Geniuses",
+        choice4: "OpTic Gaming",
         answer: 1,
     },
     {
         title: "The Seattle Kraken played their inaugural season in the year ____.",
-        choice01: "2015",
-        choice02: "1983",
-        choice03: "2021",
-        choice04: "2007",
+        choice1: "2015",
+        choice2: "1983",
+        choice3: "2021",
+        choice4: "2007",
         answer: 3,
     },
     {
         title: "Which early 2000's sitcom featured actors Drake Bell and Josh Peck?",
-        choice01: "Zoey 101",
-        choice02: "The Suite Life of Zack and Cody",
-        choice03: "Yu-Gi-Oh!",
-        choice04: "Drake & Josh",
+        choice1: "Zoey 101",
+        choice2: "The Suite Life of Zack and Cody",
+        choice3: "Drew & Jerry",
+        choice4: "Drake & Josh",
         answer: 4,
     },
     {
         title: "Who lives in a pineapple under the sea?",
-        choice01: "Carly Shay",
-        choice02: "Howie Long",
-        choice03: "Spongebob Squarepants",
-        choice04: "Lincoln Loud",
+        choice1: "Carly Shay",
+        choice2: "Howie Long",
+        choice3: "Spongebob Squarepants",
+        choice4: "Lincoln Loud",
         answer: 3,
     },
     {
         title: "Things Rick Astley would never do.",
-        choice01: "Give You up",
-        choice02: "Let You Down",
-        choice03: "Run Around and Hurt You",
-        choice04: "All of the above",
+        choice1: "Give You up",
+        choice2: "Let You Down",
+        choice3: "Run Around and Hurt You",
+        choice4: "All of the above",
         answer: 4,
     },
     {
         title: "Star Wars Episode Three: ___ is widely regarded as the best installment of the prequel series of Sci-Fi movies.",
-        choice01: "Return of the Jedi",
-        choice02: "Revenge of the Sith",
-        choice03: "The Empire Strikes Back",
-        choice04: "A New Hope",
+        choice1: "Return of the Jedi",
+        choice2: "Revenge of the Sith",
+        choice3: "The Empire Strikes Back",
+        choice4: "A New Hope",
         answer: 2,
     },
     {
         title: "This MMORPG (Massive Multiplayer Online Roleplaying Game) was a global phenomena released in November of 2004.",
-        choice01: "RuneScape",
-        choice02: "World of Warcraft",
-        choice03: "EverQuest",
-        choice04: "Star Wars: Knights of the Old Republic",
+        choice1: "RuneScape",
+        choice2: "World of Warcraft",
+        choice3: "EverQuest",
+        choice4: "Star Wars: Knights of the Old Republic",
         answer: 2,
     }
 ];
@@ -137,16 +124,14 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > TOTAL_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/Users/ThrillHaus/Desktop/Code/Test%20Area/end.html')
+        return window.location.assign('/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/scoreinput.html')
     }
 
     questionCounter++
-    progressText.innerText = `Question ${questionCounter} of ${TOTAL_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/TOTAL_QUESTIONS) * 100}%`
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
-    question.innerText = currentQuestion.question
+    title.innerText = currentQuestion.title
 
     choices.forEach(choice => {
         const number = choice.dataset['number']
@@ -184,7 +169,7 @@ choices.forEach(choice => {
 
 incrementScore = num => {
     score +=num
-    scoreText.innerText = score
+    scoreText.innerText = 'Score: '+score
 }
 
 startGame()
