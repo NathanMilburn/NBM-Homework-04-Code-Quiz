@@ -83,6 +83,25 @@ body {
     transform: scale(1.03);
 }
 
+.input-container {
+    width: 100vw;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-family: 'Nova Square';
+}
+
+#username {
+    height: 30px;
+}
+
 #highscore-btn {
     background: linear-gradient(90deg, rgb(84, 253, 42) 0%, rgb(49, 196, 56) 100%);
 }

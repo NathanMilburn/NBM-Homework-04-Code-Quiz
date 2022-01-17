@@ -6,27 +6,28 @@ var timer;
 var title = document.querySelector('#title');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
 var scoreText = document.querySelector('#score');
-var progressText = document.querySelector('#progressText');
 
 var questionCounter = 0
 var currentQuestion = {}
 var acceptingAnswers = true
 var score = 0
+var sec = 0
 let availableQuestions = []
 
 
 // Game Timer
 function countDown() {
-    var sec = 80;
+    var sec = 10;
     clearInterval(timer);
     timer = setInterval(function(){
         sec--;
         console.log(sec);
-        timerEl.textContent ='Time Left:'+sec + ' Seconds';
+        timerEl.textContent ='Time Left:'+ sec + ' Seconds';
 
         if (sec <= 0) {
             clearInterval(timer);
             timerEl.textContent ='Game Over';
+            endGame();
         }
     }, 1000);
 }
@@ -35,13 +36,9 @@ function countDown() {
 
   const startBtn = document.querySelector('#start-button');
 
-//   startBtn.addEventListener('click', () => {
-//       countDown();
-//   });
-
 countDown();
 
-
+// Question and Answer Bank
 var questions = [
     {
         title: "Where was NFL Quarterback Dan Marino's last official win?",
@@ -120,12 +117,19 @@ startGame = () => {
     getNewQuestion()
 }
 
+endGame = () => {
+    if(sec = 0) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign('/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/scoreinput.html')}
+}
+
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > TOTAL_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/scoreinput.html')
-    }
+    } 
 
     questionCounter++
 
