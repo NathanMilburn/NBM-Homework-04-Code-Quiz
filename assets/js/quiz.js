@@ -49,9 +49,9 @@ function countDown() {
     timer = setInterval(function(){
         sec--;
         console.log(sec);
-        timerEl.textContent ='00:'+sec;
+        timerEl.textContent ='Time Left:'+sec;
 
-        if (sec < 0) {
+        if (sec <= 0) {
             clearInterval(timer);
         }
     }, 1000);
