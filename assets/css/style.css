@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
     box-sizing: border-box;
@@ -14,16 +14,20 @@ body {
     height: 100%;
 }
 
-.container {
-    /* text-align: center;
-    padding: 20px;
-    line-height: 1.5; */
-    width: 100vw;
-    height: 45vh;
+#main {
+    margin-bottom: 20px;
+    font-size: 100px;
+    width: 100%;
+    height: 25px;
+  }
+
+.game-home-page {
+    width: 100%;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 1.5;
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
@@ -31,29 +35,29 @@ body {
     flex-direction: column;
 }
 
-.container h1 {
+.game-home-page h1 {
     font-size: 52px;
     color: black;
-    font-family: 'Nova Square', cursive;
+    font-family: 'Press Start 2P';
 }
 
-.container h1 #header-h1-span {
-    color: cornflowerblue;
+.game-home-page h1 #header-h1-span {
+    color: gold;
 }
 
-.container h2 {
+.game-home-page h2 {
     font-size: 26px;
     color: white;
-    font-family: 'Nova Square';
+    font-family: 'Press Start 2P';
 }
 
 .timer-and-score {
-    width: 100vw;
+    width: 100%;
     height: 1vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 1.5;
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
@@ -69,21 +73,21 @@ body {
     margin-bottom: 1rem;
     text-decoration: none;
     /* color: rgb(28,26,26); */
-    background: linear-gradient(90deg, rgb(59, 105, 206) 0%, rgb(123, 174, 252) 100%);
+    background: linear-gradient(90deg, rgb(59, 105, 206) 0%, rgb(168, 168, 168) 100%);
     border-radius: 8px;
-    font-family: 'Nova Square';
+    font-family: 'Press Start 2P';
 }
 
 .btn:hover {
     /* background-color: black;
     border: 2px solid cornflowerblue; */
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+    box-shadow: 0 0.3rem 1.3rem 0 white;
     transition: transform 150ms;
     transform: scale(1.03);
 }
 
-.input-container {
+.high-scores {
     width: 100vw;
     height: 45vh;
     display: flex;
@@ -95,7 +99,37 @@ body {
     padding: 2rem;
     flex-wrap: nowrap;
     flex-direction: column;
-    font-family: 'Nova Square';
+    font-family: 'Press Start 2P';
+}
+
+.input-scores {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.input-scores h1 {
+    font-size: 52px;
+    color: black;
+    font-family: 'Press Start 2P';
+}
+
+.input-scores h1 #header-h1-span {
+    color: cornflowerblue;
+}
+
+.input-scores h2 {
+    font-size: 26px;
+    color: white;
+    font-family: 'Press Start 2P';
 }
 
 #username {
@@ -103,40 +137,36 @@ body {
 }
 
 #highscore-btn {
-    background: linear-gradient(90deg, rgb(84, 253, 42) 0%, rgb(49, 196, 56) 100%);
+    background: linear-gradient(90deg, yellow 0%, orange 100%);
 }
 
 #highscore-btn:hover {
-    box-shadow: 0 0.6rem 1.4rem 0 rgba(104, 238, 26, 0.5);
+    box-shadow: 0 0.3rem 1.3rem 0 white;
 }
 
 .high-score {
-    font-family: 'Nova Square';
+    font-family: 'Press Start 2P';
     font-size: 36px;
     color: white;
 }
 
-#finalScore:hover {
-    color: gold;
+#finalScore {
+    color:gold;
 }
 
-
-#main {
-    margin-bottom: 20px;
-    font-size: 100px;
-    width: 100%;
-    height: 25px;
-  }
+#finalScore:hover {
+    color: white;
+}
 
 /* Timer styling */
 #countdown, #score {
     font-size: 32px;
-    font-family: 'Nova Square';
-    color: white;
+    font-family: 'Press Start 2P';
+    color: gold;
 }
 
 .game-header {
-    width: 100vw;
+    width: 100%;
     height: 25vh;
     display: flex;
     justify-content: center;
@@ -152,17 +182,17 @@ body {
 .game-header h1 {
     font-size: 52px;
     color: black;
-    font-family: 'Nova Square', cursive;
+    font-family: 'Press Start 2P';
 }
 
 .game-header #header-h1-span {
-    color: cornflowerblue;
+    color: gold;
 }
 
 .game-header h2 {
     font-size: 26px;
     color: white;
-    font-family: 'Nova Square';
+    font-family: 'Press Start 2P';
 }
 
 

@@ -3,7 +3,7 @@ body {
 }
 
 
-.choice-container {
+.choice-selector {
     display: flex;
     flex-direction: row;
     margin-bottom: 0.8rem;
@@ -13,34 +13,38 @@ body {
     font-size: 2rem;
     min-width: 80rem;
     text-align: center;
+    font-family: 'Press Start 2P';
 }
 
-.choice-container:hover {
+.choice-selector:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 white;
+    box-shadow: 0 0.3rem 1.3rem 0 white;
 }
 
-.choice-prefix {
+/* .choice-prefix {
     padding: 2rem 2.5rem;
     color: white;
-}
+    font-family: 'Press Start 2P';
+} */
 
 .choice-text {
     padding: 2rem;
     width: 100%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Press Start 2P';
 }
 
 .correct {
-    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41,232,111) 100%);
+    background: linear-gradient(45deg, rgb(239, 241, 117) 0%, rgb(232, 187, 41) 100%);
+    color: orange;
 }
 
 .incorrect {
-    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+    background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(224, 11, 11, 1) 100%);
+    color: black;
 }
 
 #title {
-    font-family: 'Arial Narrow Bold', sans-serif;
+    font-family: 'Press Start 2P';
     color:white;
     text-align: center;
 }

@@ -2,11 +2,9 @@
 // Defined variables for timer, questions, and scores
 var timerEl = document.querySelector('#countdown');
 var timer;
-
 var title = document.querySelector('#title');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
-var scoreText = document.querySelector('#score');
-
+var scoreTotal = document.querySelector('#score');
 var questionCounter = 0
 var currentQuestion = {}
 var acceptingAnswers = true
@@ -58,11 +56,11 @@ var questions = [
         answer: 3,
     },
     {
-        title: "Things Rick Astley would never do.",
+        title: "Things Rick Astley would do:",
         choice1: "Give You up",
         choice2: "Let You Down",
         choice3: "Run Around and Hurt You",
-        choice4: "All of the above",
+        choice4: "None of the above",
         answer: 4,
     },
     {
@@ -91,7 +89,7 @@ function countDown() {
     timer = setInterval(function(){
         sec--;
         console.log(sec);
-        timerEl.textContent ='Time Left:'+ sec + ' Seconds';
+        timerEl.textContent ='Time Left:'+ sec + ' Seconds Remaining';
         if (sec <= 0) {
             clearInterval(timer);
             timerEl.textContent ='Game Over';
@@ -100,21 +98,17 @@ function countDown() {
     }, 1000);
 }
 
-
-
-  const startBtn = document.querySelector('#start-button');
-
 countDown();
 
-const SCORE_INCREMENTS = 100
-const TOTAL_QUESTIONS = 8
+const scoreIncrements = 100
+const totalQuestions = 8
 
 // Game Start
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
-    getNewQuestion()
+    NewQuestion()
 }
 
 // If time expires, the game ends and the user is directed to the info input page for the high score sheet
@@ -126,8 +120,8 @@ endGame = () => {
 }
 
 // Populating next question
-getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > TOTAL_QUESTIONS) {
+NewQuestion = () => {
+    if(availableQuestions.length === 0 || questionCounter > totalQuestions) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('./scoreinput.html')
@@ -140,8 +134,8 @@ getNewQuestion = () => {
     title.innerText = currentQuestion.title
 
     choices.forEach(choice => {
-        const number = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + number]
+        const num = choice.dataset['number']
+        choice.innerText = currentQuestion['choice' + num]
     })
 
     availableQuestions.splice(questionsIndex, 1)
@@ -160,7 +154,7 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if(classToApply ==='correct') {
-            incrementScore(SCORE_INCREMENTS)
+            incrementScore(scoreIncrements)
         }
 
         if(classToApply ==='incorrect') {
@@ -170,7 +164,7 @@ choices.forEach(choice => {
 
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
-            getNewQuestion()
+            NewQuestion()
 
         }, 500)
     })
@@ -178,7 +172,7 @@ choices.forEach(choice => {
 
 incrementScore = num => {
     score +=num
-    scoreText.innerText = 'Score: '+score
+    scoreTotal.innerText = 'Score: '+score
 }
 
 startGame()
