@@ -15,6 +15,17 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 
 SO THAT I can gauge my progress compared to my peers
 
+Quiz Home Page
+![DeployedQuizMainPage](./assets/images/main-page.png "Main Page")
+
+Quiz While Running
+![DeployedQuizWhileRunning](./assets/images/running-quiz-page.png "Running the Quiz")
+
+Score Input Page
+![DeployedScoreInputPage](./assets/images/score-input-page.png "Score Input Page")
+
+High Score Page
+![DeployedHighScorePage](./assets/images/high-score-page.png "High Score Leaderboard")
 
 [DeployedCodeQuizApplication](https://nathanmilburn.github.io/NBM-Homework-04-Code-Quiz/)
 [DeployedCodeQuizRepository](https://github.com/NathanMilburn/NBM-Homework-04-Code-Quiz.git)
