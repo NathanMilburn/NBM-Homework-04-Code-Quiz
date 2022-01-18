@@ -16,67 +16,67 @@ let availableQuestions = []
 var questions = [
     {
         title: "Where was NFL Quarterback Dan Marino's last official win?",
-        choice1: "Baltimore",
-        choice2: "Miami",
-        choice3: "Seattle",
-        choice4: "Vancouver",
+        selector1: "Baltimore",
+        selector2: "Miami",
+        selector3: "Seattle",
+        selector4: "Vancouver",
         answer: 3,
         
     },
     {
         title: "Which of these eSports organizations was the first U.S team to win a major tournament in Counter Strike: Global Offensive?",
-        choice1: "Cloud9",
-        choice2: "Team Liquid",
-        choice3: "Evil Geniuses",
-        choice4: "OpTic Gaming",
+        selector1: "Cloud9",
+        selector2: "Team Liquid",
+        selector3: "Evil Geniuses",
+        selector4: "OpTic Gaming",
         answer: 1,
     },
     {
         title: "The Seattle Kraken played their inaugural season in the year ____.",
-        choice1: "2015",
-        choice2: "1983",
-        choice3: "2021",
-        choice4: "2007",
+        selector1: "2015",
+        selector2: "1983",
+        selector3: "2021",
+        selector4: "2007",
         answer: 3,
     },
     {
         title: "Which early 2000's sitcom featured actors Drake Bell and Josh Peck?",
-        choice1: "Zoey 101",
-        choice2: "The Suite Life of Zack and Cody",
-        choice3: "Drew & Jerry",
-        choice4: "Drake & Josh",
+        selector1: "Zoey 101",
+        selector2: "The Suite Life of Zack and Cody",
+        selector3: "Drew & Jerry",
+        selector4: "Drake & Josh",
         answer: 4,
     },
     {
         title: "Who lives in a pineapple under the sea?",
-        choice1: "Carly Shay",
-        choice2: "Howie Long",
-        choice3: "Spongebob Squarepants",
-        choice4: "Lincoln Loud",
+        selector1: "Carly Shay",
+        selector2: "Howie Long",
+        selector3: "Spongebob Squarepants",
+        selector4: "Lincoln Loud",
         answer: 3,
     },
     {
         title: "Things Rick Astley would do:",
-        choice1: "Give You up",
-        choice2: "Let You Down",
-        choice3: "Run Around and Hurt You",
-        choice4: "None of the above",
+        selector1: "Give You up",
+        selector2: "Let You Down",
+        selector3: "Run Around and Hurt You",
+        selector4: "None of the above",
         answer: 4,
     },
     {
         title: "Star Wars Episode Three: ___ is widely regarded as the best installment of the prequel series of Sci-Fi movies.",
-        choice1: "Return of the Jedi",
-        choice2: "Revenge of the Sith",
-        choice3: "The Empire Strikes Back",
-        choice4: "A New Hope",
+        selector1: "Return of the Jedi",
+        selector2: "Revenge of the Sith",
+        selector3: "The Empire Strikes Back",
+        selector4: "A New Hope",
         answer: 2,
     },
     {
         title: "This MMORPG (Massive Multiplayer Online Roleplaying Game) was a global phenomena released in November of 2004.",
-        choice1: "RuneScape",
-        choice2: "World of Warcraft",
-        choice3: "EverQuest",
-        choice4: "Star Wars: Knights of the Old Republic",
+        selector1: "RuneScape",
+        selector2: "World of Warcraft",
+        selector3: "EverQuest",
+        selector4: "Star Wars: Knights of the Old Republic",
         answer: 2,
     }
 ];
@@ -133,9 +133,9 @@ NewQuestion = () => {
     currentQuestion = availableQuestions[questionsIndex]
     title.innerText = currentQuestion.title
 
-    choices.forEach(choice => {
-        const num = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + num]
+    choices.forEach(selector => {
+        const num = selector.dataset['number']
+        selector.innerText = currentQuestion['selector' + num]
     })
 
     availableQuestions.splice(questionsIndex, 1)
@@ -143,8 +143,8 @@ NewQuestion = () => {
     acceptingAnswers = true
 }
 
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
+choices.forEach(selector => {
+    selector.addEventListener('click', e => {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false

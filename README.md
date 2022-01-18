@@ -15,6 +15,14 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 
 SO THAT I can gauge my progress compared to my peers
 
+I began this process by updating my instructor-supplied placeholder questions with questions of my own, then added another four questions to increase the length and challenge of the quiz.
+
+Next I created as many of the relevant css,html, and js pages as I thought were needed to link between each page when starting the game, answering questions, inputing username info for the leaderboards page, and leaderboards page.
+
+After this, I decided to implement some css styling to keep the same general color pallete as my portfolio website to maintain a consistent them when visiting my main page.
+
+
+
 Quiz Home Page
 ![DeployedQuizMainPage](./assets/images/main-page.png "Main Page")
 
