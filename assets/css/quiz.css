@@ -18,8 +18,6 @@ body {
 .choice-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 white;
-    transform: scale(1.02);
-    transform: transform 100ms;
 }
 
 .choice-prefix {
@@ -30,6 +28,7 @@ body {
 .choice-text {
     padding: 2rem;
     width: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .correct {

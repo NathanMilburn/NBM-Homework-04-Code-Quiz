@@ -10,16 +10,19 @@
 <body>
     <div class="container">
         <div id="end" class="flex-center flex-column">
+            <h1>Game Over</h1>
+            <h2>Your Score:</h2>
             <h1 id="finalScore">0</h1>
             <form class="end-form-container">
                 <h2 id="end-text">Enter Your Name Below to Save Your Score</h2>
                 <input type="text" name="name" id="username" placeholder="Enter Your Name">
-                <button class="btn" id="saveScoreBtn" type="submit" onClick="saveHighScore(event)" >Save</button>
+                <button class="btn" id="saveScoreBtn" type="submit" onClick="saveHighScore(event)" disabled>Save</button>
             </form>
             <a href="/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/quiz.html" class="btn">Play Again</a>
             <a href="/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/index.html" class="btn">Go Home</a>
         </div>
     </div>
     
+    <script src="/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/assets/js/scoreinput.js"></script>
 </body>
 </html>

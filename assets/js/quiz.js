@@ -1,5 +1,5 @@
 
-
+// Defined variables for timer, questions, and scores
 var timerEl = document.querySelector('#countdown');
 var timer;
 
@@ -86,7 +86,7 @@ var questions = [
 
 // Game Timer
 function countDown() {
-    var sec = 10;
+    var sec = 60;
     clearInterval(timer);
     timer = setInterval(function(){
         sec--;
@@ -110,6 +110,7 @@ countDown();
 const SCORE_INCREMENTS = 100
 const TOTAL_QUESTIONS = 8
 
+// Game Start
 startGame = () => {
     questionCounter = 0
     score = 0
@@ -117,13 +118,15 @@ startGame = () => {
     getNewQuestion()
 }
 
+// If time expires, the game ends and the user is directed to the info input page for the high score sheet
 endGame = () => {
-    if(sec = 0) {
-        // localStorage.setItem('mostRecentScore', score)
+    if(sec === 0) {
+        localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/scoreinput.html')}
 }
 
+// Populating next question
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > TOTAL_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
