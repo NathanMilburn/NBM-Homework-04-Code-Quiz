@@ -11,7 +11,7 @@ var questionCounter = 0
 var currentQuestion = {}
 var acceptingAnswers = true
 var score = 0
-var sec = 0
+var sec = 60
 let availableQuestions = []
 
 // Question and Answer Bank
@@ -86,13 +86,12 @@ var questions = [
 
 // Game Timer
 function countDown() {
-    var sec = 60;
+    // var sec = 60;
     clearInterval(timer);
     timer = setInterval(function(){
         sec--;
         console.log(sec);
         timerEl.textContent ='Time Left:'+ sec + ' Seconds';
-
         if (sec <= 0) {
             clearInterval(timer);
             timerEl.textContent ='Game Over';
@@ -120,7 +119,7 @@ startGame = () => {
 
 // If time expires, the game ends and the user is directed to the info input page for the high score sheet
 endGame = () => {
-    if(sec === 0) {
+    if(sec <= 0) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/scoreinput.html')}
@@ -164,6 +163,9 @@ choices.forEach(choice => {
             incrementScore(SCORE_INCREMENTS)
         }
 
+        if(classToApply ==='incorrect') {
+            sec -=10;
+        }
         selectedChoice.parentElement.classList.add(classToApply)
 
         setTimeout(() => {
