@@ -122,7 +122,7 @@ endGame = () => {
     if(sec <= 0) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/scoreinput.html')}
+        return window.location.assign('./scoreinput.html')}
 }
 
 // Populating next question
@@ -130,7 +130,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > TOTAL_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/Users/ThrillHaus/Desktop/Code/Homework/NBM-Homework-04-Code-Quiz/scoreinput.html')
+        return window.location.assign('./scoreinput.html')
     } 
 
     questionCounter++
