@@ -31,6 +31,8 @@ Some of the design elements included a favicon, highlighting the correct answer 
 
 A gameplay element I would like to impliment would be to have the score deduct 50 points for each incorrect answer, to make this fair and still attainable to reach the high score leaderboards, I plan on increasing the total question count from 8 to 20.
 
+Another gameplay element I would like to include later would be to have a special design/prompt display when the player reaches the highest score possible after completing the quiz and selecting all of the correct answers.
+
 Side Note: I am currently a part of the team that trains new hires at my place of work, and am now considering making another version of this quiz designed around our companies aesthetic and using questions we expect new hires to know the answers to by the end of their first and second week of training.
 
 Quiz Home Page
