@@ -49,16 +49,23 @@ Though the videos were helpful, I didn't want to restrict myself to using one fo
 
 One of the biggest hurdles for me was getting the timer to work when the game starts. When I got the timer function to begin counting down, I noticed that the timer would begin when the home page loaded. After some troubleshooting I was able to make the timer work when the "Test Your Knowledge" *Start Game* button was pressed. This was the first key that made me want to switch to using multiple pages for the home page, quiz page, score input page, and leaderboards page. When the timer started with the full "game-home-page" class being displayed, the page began to look cluttered and I had yet to implement the questionaire itself.
 
+![startGameAndCountDownFunction](./assets/images/startGame-and-countDown-functions.PNG)
+
 As a duct-tape solution to this problem, I adjusted the countDown function to begin as soon as the quiz page was loaded. 
 
 Next, I noticed that the game would only move to the score input screen when there were no more questions left to answer and not when the timer hit zero. 
 
 I created an endGame function that would only activate when the timer hit a second increment of less than or equal to zero, which would direct the user to the score input page regardless of how many questions were answered.
 
+![endGameFunction](./assets/images/end-game-function.PNG)
+
+
 Score Input Page
+
 ![DeployedScoreInputPage](./assets/images/score-input-page.png "Score Input Page")
 
 High Score Page
+
 ![DeployedHighScorePage](./assets/images/high-score-page.png "High Score Leaderboard")
 
 Side Note: This is silly but I figured I would explain some context behind the user hithere on the leaderboards page. I had my roommate try my quiz and he decided to use hithere as his leaderboard user name. I initially read it as "Hit Here" but after speaking with him, he confirmed that it was supposed to read "Hi There." Just a prime example of how messages via text can be misinterpretted. 
