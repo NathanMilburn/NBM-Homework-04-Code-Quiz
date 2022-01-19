@@ -11,6 +11,8 @@ var acceptingAnswers = true
 var score = 0
 var sec = 60
 let availableQuestions = []
+const scoreIncrements = 100
+const totalQuestions = 8
 
 // Question and Answer Bank
 var questions = [
@@ -81,10 +83,17 @@ var questions = [
     }
 ];
 
+// Game Start
+startGame = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    NewQuestion()
+}
+
 
 // Game Timer
 function countDown() {
-    // var sec = 60;
     clearInterval(timer);
     timer = setInterval(function(){
         sec--;
@@ -99,25 +108,6 @@ function countDown() {
 }
 
 countDown();
-
-const scoreIncrements = 100
-const totalQuestions = 8
-
-// Game Start
-startGame = () => {
-    questionCounter = 0
-    score = 0
-    availableQuestions = [...questions]
-    NewQuestion()
-}
-
-// If time expires, the game ends and the user is directed to the info input page for the high score sheet
-endGame = () => {
-    if(sec <= 0) {
-        localStorage.setItem('mostRecentScore', score)
-
-        return window.location.assign('./scoreinput.html')}
-}
 
 // Populating next question
 NewQuestion = () => {
@@ -158,7 +148,7 @@ choices.forEach(selector => {
         }
 
         if(classToApply ==='incorrect') {
-            sec -=10;
+            sec -=8;
         }
         selectedChoice.parentElement.classList.add(classToApply)
 
@@ -173,6 +163,14 @@ choices.forEach(selector => {
 incrementScore = num => {
     score +=num
     scoreTotal.innerText = 'Score: '+score
+}
+
+// If time expires, the game ends and the user is directed to the info input page for the high score sheet
+endGame = () => {
+    if(sec <= 0) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign('./scoreinput.html')}
 }
 
 startGame()
