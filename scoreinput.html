@@ -14,10 +14,12 @@
             <h2>Your Score:</h2>
             <h1 id="finalScore">0</h1>
             <form class="end-form-container">
-                <h2 id="end-text">Enter Your Name Below to Save Your Score</h2>
+                <h2 id="end-text">Enter Your Name Below to See How You Stack Up!</h2>
                 <input type="text" name="name" id="username" placeholder="Enter Your Name">
                 <button class="btn" id="saveScoreBtn" type="submit" onClick="saveHighScore(event)" disabled>Save</button>
             </form>
+            <!-- "Buttons" to direct player back to main page or new quiz attempt -->
+            <!-- I chose anchor tags instead of buttons (in most cases) as the button tag created a border around each button that clashed with how I wanted the styling to look -->
             <a href="./quiz.html" class="btn">Try Again</a>
             <a href="./index.html" class="btn">Go Home</a>
         </div>

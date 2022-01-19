@@ -8,6 +8,7 @@
     position: relative;
 }
 
+/* Instead of using a black and white gradient, I decided to use the cornflowerblue more to add more color and pop to the page. I also tested how a cornflowerblue font would look with a black and white gradient and it became significantly harder to read. */
 body {
     background-image: linear-gradient(90deg, black, cornflowerblue);
     font-size: 16px;
@@ -22,6 +23,7 @@ body {
     height: 25px;
   }
 
+/* I used this structer a lot for different pages with slight tweaks to allow for proper formatting for each pages unique elements */
 .game-home-page {
     width: 100%;
     height: 60vh;
@@ -42,6 +44,7 @@ body {
     font-family: 'Press Start 2P';
 }
 
+/* Highlighting "Again" matched the design of the portfolio page, while also giving an indirect push to play again*/
 .game-home-page h1 #header-h1-span {
     color: gold;
 }
@@ -85,8 +88,9 @@ body {
     transform: scale(1.03);
 }
 
+/* I used this structer a lot for different pages with slight tweaks to allow for proper formatting for each pages unique elements */
 .high-scores {
-    width: 100vw;
+    width: 100%;
     height: 45vh;
     display: flex;
     justify-content: center;
@@ -100,6 +104,7 @@ body {
     font-family: 'Press Start 2P';
 }
 
+/* I used this structer a lot for different pages with slight tweaks to allow for proper formatting for each pages unique elements */
 .input-scores {
     width: 100%;
     height: 60vh;
@@ -152,7 +157,9 @@ body {
     color:gold;
 }
 
+/* I added a pointer element for later user where there would be either an alt tag or a prompt to tell you what your score was out of 800 */
 #finalScore:hover {
+    cursor: pointer;
     color: white;
 }
 
@@ -163,6 +170,7 @@ body {
     color: gold;
 }
 
+/* I used this structer a lot for different pages with slight tweaks to allow for proper formatting for each pages unique elements */
 .game-header {
     width: 100%;
     height: 25vh;
@@ -183,6 +191,7 @@ body {
     font-family: 'Press Start 2P';
 }
 
+/* Highlighting "Again" matched the design of the portfolio page, while also giving an indirect push to play again*/
 .game-header #header-h1-span {
     color: gold;
 }
@@ -193,6 +202,7 @@ body {
     font-family: 'Press Start 2P';
 }
 
+/* I used a different font for the "previous players" quotes as too much of the Press Start 2P font would have cluttered the page and made it hard to read */
 .fancy {
     color: rgb(185, 185, 185);
     font-size: 16px;

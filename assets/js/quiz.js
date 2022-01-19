@@ -133,6 +133,7 @@ NewQuestion = () => {
     acceptingAnswers = true
 }
 
+// Check for correct or incorrect selection
 choices.forEach(selector => {
     selector.addEventListener('click', e => {
         if(!acceptingAnswers) return
@@ -160,6 +161,7 @@ choices.forEach(selector => {
     })
 })
 
+// Score increase with each correct selection
 incrementScore = num => {
     score +=num
     scoreTotal.innerText = 'Score: '+score

@@ -15,6 +15,9 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 
 SO THAT I can gauge my progress compared to my peers
 
+Quiz Home Page
+![DeployedQuizMainPage](./assets/images/main-page.png "Main Page")
+
 I began this process by updating my instructor-supplied placeholder questions with questions of my own, then added another four questions to increase the length and challenge of the quiz.
 
 Next I created as many of the relevant css,html, and js pages as I thought were needed to link between each page when starting the game, answering questions, inputing username info for the leaderboards page, and leaderboards page.
@@ -35,9 +38,6 @@ Another gameplay element I would like to include later would be to have a specia
 
 Side Note: I am currently a part of the team that trains new hires at my place of work, and am now considering making another version of this quiz designed around our companies aesthetic and using questions we expect new hires to know the answers to by the end of their first and second week of training.
 
-Quiz Home Page
-![DeployedQuizMainPage](./assets/images/main-page.png "Main Page")
-
 Quiz While Running
 ![DeployedQuizWhileRunning](./assets/images/running-quiz-page.png "Running the Quiz")
 
@@ -47,7 +47,9 @@ My original approach was to have the game exist exclusively on one html sheet th
 
 Though the videos were helpful, I didn't want to restrict myself to using one format and instead used elements and concepts from about four different tutorials to build a structure that I was content with. In addition to this, none of the videos featured a timer element that ticked down with each second. So I needed to do more research into building a countdown timer that worked with the game while also decrementing the time remaining with each incorrect guess.
 
-One of the biggest hurdles for me was getting the timer to work when the game starts. When I got the timer function to begin counting down, I noticed that the timer would begin when the page loaded. After some troubleshooting I was able to make the timer work when the "Test Your Knowledge" *Start Game* button was pressed. This was the first key that made me want to switch to using multiple pages for the home page, quiz page, score input page, and leaderboards page. When the timer started with the full "game-home-page" class being displayed, the page began to look cluttered and I had yet to implement the questionaire itself.
+One of the biggest hurdles for me was getting the timer to work when the game starts. When I got the timer function to begin counting down, I noticed that the timer would begin when the home page loaded. After some troubleshooting I was able to make the timer work when the "Test Your Knowledge" *Start Game* button was pressed. This was the first key that made me want to switch to using multiple pages for the home page, quiz page, score input page, and leaderboards page. When the timer started with the full "game-home-page" class being displayed, the page began to look cluttered and I had yet to implement the questionaire itself.
+
+As a duct-tape solution to this problem, I adjusted the countDown function to begin as soon as the quiz page was loaded. 
 
 Next, I noticed that the game would only move to the score input screen when there were no more questions left to answer and not when the timer hit zero. 
 
